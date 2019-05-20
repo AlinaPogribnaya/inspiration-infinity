@@ -22,9 +22,5 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.archive, name='archive'),
+    url(r'^article/(?P<article_id>\d+)$', views.get_article, name='get_article'),
 ]
-url(
-r'^article/(?P<article_id>\d+)$',
-'articles.views.get_article',
-name='get_article'
-)
