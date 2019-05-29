@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Архив всех статей</title>
+    <link rel="stylesheet" href="static/css/article.css">
+</head>
+<div class = "logout">
+    <a href = "{{'/logout'}}"><h3 class = "logout_">Выйти</h3></a>
+</div>
+<body>
+    <div class="header">
+        <img src="static/butterfly_1.gif" />
+    </div>
+    <div class="archive">
+        {% for post in posts %}
+        <div class="one-post">
+            <a href='/article/{{post.id}}'><h2 class="post-title">{{ post.title }}</h2></a>>
+            <div class="article-info">
+
+                <div class="article-author">{{ post.author.username }}</div>
+                <div class="article-created-date">{{ post.created_date }}</div>
+            </div>
+
+            <p class="article-text">{{ post.get_excerpt }}</p></div>
+        {% endfor %}
+    </div>
+</body>
+</html>
