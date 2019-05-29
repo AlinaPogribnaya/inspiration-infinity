@@ -1,0 +1,16 @@
+mas = []
+print('введите чиcло элементов списка>10')
+n= int(input())
+print('введите список элементов')
+i=0
+for i in range(n):mas.append(int(input()))
+l = len(mas)
+mas1 = list(filter(lambda x: int(x) % 2, mas))
+print('добавьте 5 элементов списка')
+mas1.append(int(input()))
+mas1.append(int(input()))
+mas1.append(int(input()))
+mas1.append(int(input()))
+mas1.append(int(input()))
+print(l)
+print(mas1)
